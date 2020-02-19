@@ -7,6 +7,9 @@ type KeyByValue<V, O extends InvertibleObject> = {
 
 /**
  * Inverts object's keys and values
+ * 
+ * @version TypeScript 2.9
+ * @see https://github.com/Microsoft/TypeScript/wiki/Breaking-Changes#typescript-29
  */
 export type Invert<O extends InvertibleObject> = {
   [V in O[keyof O]]: KeyByValue<V, O>
