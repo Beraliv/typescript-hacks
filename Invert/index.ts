@@ -9,5 +9,5 @@ type KeyByValue<V, O extends InvertibleObject> = {
  * Inverts object's keys and values
  */
 export type Invert<O extends InvertibleObject> = {
-  [Value in O[keyof O]]: KeyByValue<Value, O>
+  [V in O[keyof O]]: KeyByValue<V, O>
 }
