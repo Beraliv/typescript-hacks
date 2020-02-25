@@ -1,7 +1,7 @@
 import { Invert } from './'
 
 // ✅ It is working with string | number | symbol
-const two = Symbol('2');
+const two = Symbol('2')
 type Number = {
   1: 'one'
   [two]: 'two'
@@ -14,7 +14,7 @@ type Number = {
   9: 'nine'
 }
 // { two: typeof two, one: 1; three: 3; four: 4; five: 5; six: 6; seven: 7; eight: 8; nine: 9; }
-type InvertedNumber = Invert<Number>;
+type InvertedNumber = Invert<Number>
 
 // ❌ It cannot work with object and array
 type Flat = {
@@ -36,7 +36,7 @@ type FamilyMember = {
   brother: 'Andrew'
 }
 // { Andrew: "dad" | "brother"; Arina: "mum"; }
-type InvertedFamilyMember = Invert<FamilyMember>;
+type InvertedFamilyMember = Invert<FamilyMember>
 
 // ✅ It ignores `null` and `undefined`
 type Box = {
@@ -44,10 +44,10 @@ type Box = {
   pencils: undefined
 }
 // {}
-type InvertedBox = Invert<Box>;
+type InvertedBox = Invert<Box>
 // {}
-type DoubleInvertedBox = Invert<Invert<Box>>;
+type DoubleInvertedBox = Invert<Invert<Box>>
 
 // ✅ It gets type as is after double usage
 // { dad: 'Andrew'; mum: 'Arina'; brother: 'Andrew'; }
-type DoubleInvertedFamilyMember = Invert<Invert<FamilyMember>>;
+type DoubleInvertedFamilyMember = Invert<Invert<FamilyMember>>

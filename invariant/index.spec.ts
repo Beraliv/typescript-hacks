@@ -5,7 +5,7 @@ function add(first: unknown, second: unknown) {
   invariant(typeof first === 'number', 'first value is not a number')
   invariant(typeof second === 'number', 'second value is not a number')
 
-  return first + second;
+  return first + second
 }
 
 // error 'first value is not a number' will be thrown
