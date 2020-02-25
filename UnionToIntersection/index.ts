@@ -1,8 +1,8 @@
 /**
  * Converts union type to intersection type
  * 
- * @version TypeScript 1.4
- * @see http://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-4.html#union-types
+ * @version TypeScript 2.8
+ * @see https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
  */
 export type UnionToIntersection<T> = (
   // without this extends you get `T`
