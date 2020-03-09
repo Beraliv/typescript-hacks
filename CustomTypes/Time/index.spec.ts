@@ -1,4 +1,5 @@
 import { Seconds } from "./Seconds"
+import { Minutes } from "./Minutes"
 import { AbsoluteValue } from "../Mark/AbsoluteValue"
 
 // ✅ It constrains arguments' and results' types
@@ -16,3 +17,7 @@ const thirdResult = getDiff(2 as Seconds, 1 as unknown)
 // ❌ Checks that one of values is any and therefore returns any
 const fourthResult = getDiff(2 as Seconds, 1 as any)
 const fifthResult = getDiff(2 as any, 1 as Seconds)
+
+// ✅ Checks that values are Minutes and Seconds and therefore returns Minutes
+// @ts-ignore fails because 1 is inferred as Seconds but expected Minutes ❌
+const sixthResult = getDiff(2 as Minutes, 1 as Seconds)
