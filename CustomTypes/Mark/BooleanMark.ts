@@ -3,4 +3,4 @@
  * 
  * Example: `BooleanMark<'time'> = { time: true }`
  */
-export type BooleanMark<K extends symbol | string | number, V = true> = Record<K, V>
+export type BooleanMark<K extends PropertyKey, V = true> = Record<K, V>
